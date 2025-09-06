@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>interest Calculator</title>
+</head>
+
+
+<body>
+<div id="container">
+<h1>Welcome to Interest Calculator</h1><br>
+
+<form>
+<label> Enter Principle Amount:</label>
+<input type="number" id="p"placeholder="in Rupees"><br><br>
+<label>Enter interest rate:</label>
+<input type="number" id="t" placeholder="in decimals"><br><br>
+<label>Enter Time period:</label>
+<input type="number" id="r" placeholder="in months"><br><br>
+
+<input type="button" id="si" value="Simple Interest" onclick="simpleInterest()"</button>
+
+<br><br><b id="result"></b>
+<br><br>
+<b id="total"></b>
+
+</form>
+</div>
+
+<style>
+body{
+color:#49111c;
+background-color:#d8f3dc;
+text-align:center;
+font-family:Arial,sans-serif;
+}
+
+#container{
+border-radius:5px;
+box-shadow: 3px 4px 10px rgba(0,0,0,0.2);
+border:0px, solid,black;
+margin-top:100px;
+margin-right:350px;
+margin-left:350px;
+padding:90px;
+}
+
+
+#si{
+padding:10px;
+
+}
+
+#si:hover{
+cursor: pointer;
+color:white;
+padding:11px;
+background-color:black;
+box-shadow: 3px 4px 10px rgba(0,0,0,0.2);
+}
+
+#result,#total{
+color:green;
+font-size:20px;
+}
+
+</style>
+
+<script>
+function simpleInterest(){
+var p=Number(document.getElementById("p").value);
+var t=document.getElementById("t").value;
+var r=document.getElementById("r").value;
+var interest=p*t*r/100;
+document.getElementById("result").innerHTML="Simple Interest: ₹"+interest;
+var total=interest+p;
+document.getElementById("total").innerHTML="Total: ₹"+total;
+
+}
+
+</script>
+
+</body>
+</html>
